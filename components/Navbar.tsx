@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ConnectWalletButton } from "@/components/ui/connect-wallet-button";
+import { NetworkSwitcher } from "@/components/ui/network-switcher";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -13,7 +14,8 @@ export default function Navbar() {
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="8" fill="#22C55E"/><rect x="10" y="10" width="12" height="12" rx="4" fill="#fff"/><rect x="14" y="14" width="4" height="4" rx="1" fill="#22C55E"/></svg>
           MediChainX
         </Link>
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-4">
+          <NetworkSwitcher />
           <ConnectWalletButton 
             variant="outline" 
             size="default"
@@ -32,6 +34,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-white/90 backdrop-blur-xl border-t border-slate-200 px-4 pb-4 flex flex-col items-end gap-4">
+          <NetworkSwitcher />
           <ConnectWalletButton 
             variant="outline" 
             size="default"

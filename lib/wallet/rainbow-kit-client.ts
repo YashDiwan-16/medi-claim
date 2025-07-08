@@ -7,7 +7,8 @@ import {
     optimism,
     arbitrum,
     base,
-    sepolia
+    sepolia,
+    polygonAmoy
 } from 'wagmi/chains';
 import { http } from 'viem';
 
@@ -21,7 +22,7 @@ export const config = getDefaultConfig({
         optimism,
         arbitrum,
         base,
-        ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
+        ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia, polygonAmoy] : []),
     ],
     transports: process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true'
         ? {
@@ -31,6 +32,7 @@ export const config = getDefaultConfig({
             [arbitrum.id]: http(),
             [base.id]: http(),
             [sepolia.id]: http(),
+            [polygonAmoy.id]: http(),
         }
         : {
             [mainnet.id]: http(),
