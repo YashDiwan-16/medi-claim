@@ -22,6 +22,7 @@ export default function Navbar() {
             className="bg-white/80 hover:bg-white border-[#22C55E] text-[#1E3A8A] hover:text-[#16a34a] transition-colors"
             showBalance={false}
           />
+          <Link href="/marketplace" className="text-[#1E3A8A] hover:text-[#16a34a] font-semibold px-4 py-2 rounded transition-colors">Marketplace</Link>
           <Button asChild className="bg-[#22C55E] hover:bg-[#16a34a] text-white rounded-full px-6 py-2 text-base font-semibold shadow-none">
             <Link href="/buy">Get Started</Link>
           </Button>
@@ -41,6 +42,7 @@ export default function Navbar() {
             className="w-full bg-white/80 hover:bg-white border-[#22C55E] text-[#1E3A8A] hover:text-[#16a34a] transition-colors"
             showBalance={false}
           />
+          <Link href="/marketplace" className="w-full text-[#1E3A8A] hover:text-[#16a34a] font-semibold px-4 py-2 rounded transition-colors text-right">Marketplace</Link>
           <Button asChild className="w-full bg-[#22C55E] hover:bg-[#16a34a] text-white rounded-full px-6 py-2 text-base font-semibold shadow-none">
             <Link href="/buy">Get Started</Link>
           </Button>
